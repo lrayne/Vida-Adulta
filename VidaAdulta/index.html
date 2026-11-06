@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Adulta — A vida adulta não vem com manual</title>
+    <meta name="description" content="Aprenda a cuidar do dinheiro, entender documentos, se preparar para o trabalho e tomar decisões com mais confiança.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo" onclick="mostrarSecao('home')">
+                <span class="logo-mark">✦</span>
+                <span class="logo-text">Vida Adulta</span>
+            </div>
+            <nav class="nav-principal">
+                <button onclick="mostrarSecao('home')">Início</button>
+                <button onclick="mostrarSecao('trilhas')">Trilhas</button>
+                <button onclick="mostrarSecao('ferramentas')">Ferramentas</button>
+                <button onclick="mostrarSecao('glossario')">Glossário</button>
+                <button onclick="mostrarSecao('checklist')">Checklist</button>
+                <button onclick="mostrarSecao('favoritos')">Favoritos</button>
+                <button id="btnLogin" class="btn-login" onclick="abrirModal('modalAuth')">Entrar</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========== HOME ========== -->
+        <section id="home" class="secao ativa">
+
+            <!-- HERO EDITORIAL -->
+            <div class="hero">
+                <span class="badge-hero">SEU PRÓXIMO PASSO COMEÇA AQUI</span>
+                <h1 class="hero-titulo">A vida adulta não vem com manual.<br><em>A gente te ajuda a construir o seu.</em></h1>
+                <p class="hero-sub">Aprenda a cuidar do dinheiro, entender documentos, se preparar para o trabalho e tomar decisões com mais confiança.</p>
+                <div class="hero-acoes">
+                    <button class="btn-primario" onclick="mostrarSecao('trilhas')">Começar agora</button>
+                    <button class="btn-secundario" onclick="mostrarSecao('ferramentas')">Ver ferramentas</button>
+                </div>
+            </div>
+
+            <!-- SEU FUTURO, NO SEU RITMO -->
+            <div class="bloco-ritmo">
+                <div class="bloco-ritmo-texto">
+                    <span class="eyebrow">JORNADA DE APRENDIZAGEM</span>
+                    <h2>Seu futuro, no seu ritmo.</h2>
+                    <p>Pequenos aprendizados. Grandes conquistas.</p>
+                </div>
+                <div class="bloco-ritmo-marcadores">
+                    <span class="marcador">◈ Educação financeira</span>
+                    <span class="marcador">✦ Vida profissional</span>
+                    <span class="marcador">✧ Burocracia sem medo</span>
+                </div>
+            </div>
+
+            <!-- SOBRE A PLATAFORMA -->
+            <div class="bloco-sobre">
+                <span class="eyebrow">SOBRE A PLATAFORMA</span>
+                <h2 class="titulo-secao">Mais clareza para cada nova responsabilidade.</h2>
+                <p class="subtitulo-secao">Um espaço para aprender sem complicação, consultar quando precisar e avançar no seu próprio ritmo.</p>
+
+                <div class="pilares-grid">
+                    <div class="pilar">
+                        <h3>Aprenda</h3>
+                        <p>Trilhas educativas com explicações diretas e exemplos do cotidiano.</p>
+                    </div>
+                    <div class="pilar">
+                        <h3>Organize-se</h3>
+                        <p>Checklists e ferramentas para acompanhar suas tarefas e seu dinheiro.</p>
+                    </div>
+                    <div class="pilar">
+                        <h3>Prepare-se</h3>
+                        <p>Recursos para currículo, entrevistas e primeiros passos profissionais.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECURSOS / CARDS -->
+            <div class="bloco-recursos">
+                <span class="eyebrow">RECURSOS</span>
+                <h2 class="titulo-secao">Conhecimento para a vida real.</h2>
+
+                <div class="cards-home">
+                    <div class="card" onclick="mostrarSecao('trilhas')">
+                        <span class="card-num">01</span>
+                        <h3>Vida Financeira</h3>
+                        <p>Conta bancária, PIX, cartão de crédito e orçamento 50-30-20.</p>
+                        <span class="card-link">Explorar →</span>
+                    </div>
+                    <div class="card" onclick="mostrarSecao('ferramentas')">
+                        <span class="card-num">02</span>
+                        <h3>Empregabilidade</h3>
+                        <p>Currículo, entrevistas e direitos trabalhistas.</p>
+                        <span class="card-link">Explorar →</span>
+                    </div>
+                    <div class="card" onclick="mostrarSecao('trilhas')">
+                        <span class="card-num">03</span>
+                        <h3>Burocracia</h3>
+                        <p>CPF, RG, Imposto de Renda e contratos do dia a dia.</p>
+                        <span class="card-link">Explorar →</span>
+                    </div>
+                    <div class="card" onclick="mostrarSecao('checklist')">
+                        <span class="card-num">04</span>
+                        <h3>Checklist da Maioridade</h3>
+                        <p>Acompanhe suas conquistas rumo à autonomia.</p>
+                        <span class="card-link">Explorar →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TRILHAS ========== -->
+        <section id="trilhas" class="secao">
+            <div class="secao-header">
+                <span class="eyebrow">JORNADA DE APRENDIZAGEM</span>
+                <h2 class="titulo-secao">Trilhas Educativas</h2>
+                <p class="subtitulo-secao">Conteúdos organizados por tema para você avançar no seu ritmo.</p>
+            </div>
+
+            <div class="busca-wrap">
+                <input type="text" id="busca" placeholder="Pesquisar conteúdos..." oninput="pesquisar()">
+            </div>
+
+            <div id="progressoTrilhas"></div>
+            <div id="listaTrilhas"></div>
+        </section>
+
+        <!-- ========== FERRAMENTAS ========== -->
+        <section id="ferramentas" class="secao">
+            <div class="secao-header">
+                <span class="eyebrow">RECURSOS PRÁTICOS</span>
+                <h2 class="titulo-secao">Ferramentas Práticas</h2>
+                <p class="subtitulo-secao">Simuladores e geradores para o dia a dia — sem complicação.</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab ativa" onclick="abrirAba(event,'curriculo')">Gerador de Currículo</button>
+                <button class="tab" onclick="abrirAba(event,'salario')">Simulador de Salário</button>
+                <button class="tab" onclick="abrirAba(event,'juros')">Juros do Cartão</button>
+                <button class="tab" onclick="abrirAba(event,'entrevista')">Simulador de Entrevista</button>
+            </div>
+
+            <!-- Currículo -->
+            <div id="curriculo" class="aba-conteudo ativa">
+                <h3>Gerador de Currículo</h3>
+                <input id="cvNome" placeholder="Nome completo">
+                <input id="cvEmail" placeholder="E-mail">
+                <input id="cvTelefone" placeholder="Telefone">
+                <input id="cvObjetivo" placeholder="Objetivo profissional">
+                <textarea id="cvExperiencia" placeholder="Experiências (escola, voluntariado, projetos)"></textarea>
+                <textarea id="cvFormacao" placeholder="Formação"></textarea>
+                <textarea id="cvSkills" placeholder="Habilidades (separe por vírgula)"></textarea>
+                <button class="btn-primario" onclick="gerarCurriculo()">Gerar Currículo</button>
+                <button class="btn-secundario" onclick="exportarPDF()">Exportar PDF</button>
+                <button class="btn-limpar" onclick="limparCurriculo()">Limpar</button>
+                <div id="cvPreview" class="preview-cv"></div>
+            </div>
+
+            <!-- Salário -->
+            <div id="salario" class="aba-conteudo">
+                <h3>Simulador de Salário Líquido</h3>
+                <p class="subtitulo">Estimativa baseada nas tabelas de INSS e IRRF de 2026.</p>
+
+                <div class="simulador-grid">
+                    <div class="sim-form">
+                        <div class="campo">
+                            <label>Salário Bruto <span class="info" title="Valor total antes dos descontos">ⓘ</span></label>
+                            <div class="input-prefix">
+                                <span>R$</span>
+                                <input type="number" id="salBruto" placeholder="0,00" step="0.01">
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label>Outros descontos <span class="info"
+                                    title="Ex: pensão, empréstimo, plano de saúde">ⓘ</span></label>
+                            <div class="input-prefix">
+                                <span>R$</span>
+                                <input type="number" id="outrosDescontos" placeholder="0,00" step="0.01">
+                            </div>
+                        </div>
+
+                        <div class="campo check">
+                            <label class="label-check">
+                                <input type="checkbox" id="temHorasExtras" onchange="toggleHoras()">
+                                Horas extras <span class="info" title="Horas trabalhadas além da jornada">ⓘ</span>
+                            </label>
+                            <div class="input-lado" id="boxHoras" style="display:none">
+                                <span class="mini-label">Quantidade:</span>
+                                <input type="number" id="qtdHoras" placeholder="0" step="1" min="0">
+                            </div>
+                        </div>
+
+                        <button class="btn-primario btn-calcular" onclick="calcularSalario()">Calcular</button>
+                    </div>
+
+                    <div class="sim-resultado">
+                        <div class="resultado-box" id="resSalarioTop">Seu resultado aparecerá aqui</div>
+
+                        <div class="grafico-wrap">
+                            <svg viewBox="0 0 120 120" class="grafico-rosca">
+                                <circle cx="60" cy="60" r="50" fill="none" stroke="#e5e7eb" stroke-width="15" />
+                                <circle id="arcoProventos" cx="60" cy="60" r="50" fill="none" stroke="#3b82f6"
+                                    stroke-width="15" stroke-dasharray="0 314" stroke-dashoffset="0"
+                                    transform="rotate(-90 60 60)" />
+                                <circle id="arcoDescontos" cx="60" cy="60" r="50" fill="none" stroke="#ec4899"
+                                    stroke-width="15" stroke-dasharray="0 314" stroke-dashoffset="0"
+                                    transform="rotate(-90 60 60)" />
+                            </svg>
+                            <div class="grafico-centro" id="graficoCentro">—</div>
+                        </div>
+
+                        <div class="legenda">
+                            <div class="legenda-item">
+                                <span class="quad azul"></span> Proventos: <strong id="legProventos">R$ 0,00</strong>
+                            </div>
+                            <div class="legenda-item">
+                                <span class="quad rosa"></span> Descontos: <strong id="legDescontos">R$ 0,00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="resSalarioDetalhe" class="resultado-detalhe"></div>
+            </div>
+
+            <!-- Juros -->
+            <div id="juros" class="aba-conteudo">
+                <h3>Simulador de Juros do Cartão</h3>
+                <input type="number" id="valorDivida" placeholder="Valor da dívida (R$)">
+                <input type="number" id="taxaJuros" placeholder="Taxa mensal (%)" value="15">
+                <input type="number" id="meses" placeholder="Meses sem pagar" value="6">
+                <button class="btn-primario" onclick="calcularJuros()">Simular</button>
+                <button class="btn-limpar" onclick="limparJuros()">Limpar</button>
+                <div id="resJuros" class="resultado"></div>
+            </div>
+
+            <!-- Entrevista -->
+            <div id="entrevista" class="aba-conteudo">
+                <h3>Simulador de Entrevista</h3>
+                <div id="perguntaBox"></div>
+                <button class="btn-secundario" onclick="proximaPergunta()">Próxima pergunta</button>
+            </div>
+        </section>
+
+        <!-- ========== GLOSSÁRIO ========== -->
+        <section id="glossario" class="secao">
+            <div class="secao-header">
+                <span class="eyebrow">TRADUTOR DE BUROCRACIA</span>
+                <h2 class="titulo-secao">Glossário sem jargão</h2>
+                <p class="subtitulo-secao">Os termos que todo mundo usa, explicados em português claro.</p>
+            </div>
+
+            <div class="busca-wrap">
+                <input type="text" id="buscaGlossario" placeholder="Buscar termo..." oninput="filtrarGlossario()">
+            </div>
+            <div id="listaGlossario"></div>
+        </section>
+
+        <!-- ========== CHECKLIST ========== -->
+        <section id="checklist" class="secao">
+            <div class="secao-header">
+                <span class="eyebrow">AUTONOMIA NA PRÁTICA</span>
+                <h2 class="titulo-secao">Checklist da Maioridade</h2>
+                <p class="subtitulo-secao">Acompanhe suas conquistas rumo à autonomia, uma tarefa de cada vez.</p>
+            </div>
+
+            <div class="checklist-add">
+                <input type="text" id="novaTarefa" placeholder="Nova tarefa (ex: Tirar passaporte)"
+                    onkeypress="if(event.key==='Enter') adicionarTarefa()">
+                <button class="btn-primario" onclick="adicionarTarefa()">➕ Adicionar</button>
+            </div>
+
+            <div id="listaChecklist"></div>
+
+            <div class="checklist-footer">
+                <p id="progressoChecklist"></p>
+                <button class="btn-secundario" onclick="limparConcluidas()">Limpar concluídas</button>
+                <button class="btn-secundario" onclick="resetarChecklist()">Restaurar padrão</button>
+            </div>
+        </section>
+
+        <!-- ========== FAVORITOS ========== -->
+        <section id="favoritos" class="secao">
+            <div class="secao-header">
+                <span class="eyebrow">SEU ACERVO PESSOAL</span>
+                <h2 class="titulo-secao">Meus Favoritos</h2>
+                <p class="subtitulo-secao">Tudo o que você marcou para voltar depois, num só lugar.</p>
+            </div>
+            <div id="listaFavoritos"></div>
+        </section>
+
+    </main>
+
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">✦ Vida Adulta</div>
+            <p class="footer-tag">Informação simples para decisões mais conscientes.</p>
+            <p class="footer-copy">© <span id="anoAtual"></span> Vida Adulta — feito para quem está começando.</p>
+        </div>
+    </footer>
+
+    <!-- ========== MODAL AUTENTICAÇÃO ========== -->
+    <div id="modalAuth" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal('modalAuth')">&times;</span>
+            <h2 id="tituloAuth">Entrar</h2>
+            <input id="authNome" placeholder="Nome completo" style="display:none">
+            <input id="authEmail" placeholder="E-mail">
+            <input id="authSenha" type="password" placeholder="Senha">
+            <button class="btn-primario" id="btnAcaoAuth" onclick="executarAuth()">Entrar</button>
+            <p class="link-troca" onclick="alternarAuth()" id="trocaTexto">Não tem conta? Cadastre-se</p>
+        </div>
+    </div>
+
+    <!-- ========== MODAL DE CONTEÚDO DA TRILHA ========== -->
+    <div id="modalConteudo" class="modal">
+        <div class="modal-conteudo modal-grande">
+            <span class="fechar" onclick="fecharModal('modalConteudo')">&times;</span>
+            <div id="conteudoTrilha"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // pequeno complemento: preenche o ano no rodapé
+        document.getElementById('anoAtual').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
